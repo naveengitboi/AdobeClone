@@ -1,3 +1,21 @@
+// onloader animation
+const loaderAni = document.querySelector('.loaderAni')
+
+anime({
+    targets: '#loadText path',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'easeInOutSine',
+    duration: 1200,
+    delay: function(el, i) { return i * 250 },
+    direction: 'alternate',
+    loop: false
+  });
+
+  setTimeout(() => {
+    loaderAni.classList.add('loaderAniClose')
+  },5800)
+
+
 
 ///navbar
 
